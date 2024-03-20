@@ -1,6 +1,6 @@
 # Oauth2
 
-# About
+## About
 
 Desafio do Módulo II - Autenticação e Autorização - XPE/IGTI<br/>
 Autenticação com Google e Facebook | Google and Facebook Authentication<br/>
