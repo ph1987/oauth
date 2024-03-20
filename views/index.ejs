@@ -1,0 +1,39 @@
+<div
+  style="
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 20vh;
+  "
+>
+  <div
+    style="
+      width: 300px;
+      margin-top: 2%;
+      height: auto;
+      background-color: #effaff;
+      padding: 5px 5px 20px 5px;
+      border-radius: 8px;
+      border: 1px solid #000;
+    "
+  >
+    <% if (!user) { %>
+
+    <h2 style="font-size: 20px">Welcome!<br/> Choose how to log in.</h2>
+    <a href="/auth/google">Continue with Google</a><br /><br />
+    <a href="/auth/facebook">Continue with Facebok</a>
+
+    <% } else { %>
+
+    <h2>Hello, <%= user.displayName %>.</h2>
+
+    <% if (user.photos?.length) { %>
+      <img src=<%= user.photos[0].value %> /><br/><br/>
+    <% } %>
+
+    <a href="/logout">Logout from <%= user.provider %></a>
+
+    <% } %>
+  </div>
+</div>
